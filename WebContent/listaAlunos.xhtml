@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Trabalho 6</title>
+	<h:outputStylesheet name="css/styles.css"/>
+</h:head>
+<h:body>
+	<h2>Lista de Alunos Cadastrados</h2><br/>
+	<h:form>
+		<h:dataTable id="listaAlunos" value="#{alunoController.alunos}" var="aluno">
+			<h:column>
+				<f:facet name="header">Matricula</f:facet>
+				#{aluno.matricula}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Nome</f:facet>
+				#{aluno.nome}
+			</h:column>
+			<h:column>
+				<f:facet name="header">RA</f:facet>
+				#{aluno.ra}
+			</h:column>
+		</h:dataTable>
+		<h:commandLink value="Voltar" action="index" />
+	</h:form>
+</h:body>
+</html>

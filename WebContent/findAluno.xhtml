@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Trabalho 6</title>
+	<h:outputStylesheet library="css" name="styles.css"/>
+</h:head>
+<h:body>
+	<h:form>
+		<h3>Adicionando alunos</h3>
+		<hr/>
+		
+		<table>
+			<tr>
+				<td>Matricula: </td>
+				<td><h:inputText id="matricula" size="10" value="#{alunoController.matricula}"/></td>
+			</tr>
+			<tr>
+				<td>Nome: </td>
+				<td><h:inputText size="20" value="#{alunoController.nome}"/></td>
+			</tr>
+			<tr>
+				<td>RA: </td>
+				<td><h:inputText size="05" value="#{alunoController.ra}"/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<h:commandButton value="Pesquisar" action="#{alunoController.findAluno}" rendered="true"></h:commandButton>
+					<br/>
+					<h:outputText value="#{alunoController.mensagem}"/>
+				</td>
+			</tr>
+		</table>
+		<h:commandLink value="Voltar" action="index"/>
+	</h:form>
+</h:body>
+</html>
